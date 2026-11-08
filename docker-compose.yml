@@ -1,0 +1,11 @@
+services:
+  agent:
+    build:
+      context: .
+    init: true
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
